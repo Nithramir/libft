@@ -102,5 +102,6 @@ int					get_next_line(const int fd, char **line);
 
 void				**ft_ptradd(void **list, void *add);
 void				**ft_ptradd_free(void **list, void *add);
+void				ft_afficher_tab_c(char **tab);
 
 #endif

@@ -88,6 +88,7 @@ SRC_NAME = ft_atoi.c\
 		   specifier.c\
 		   ft_ptradd.c\
 		   ft_ptradd_free.c\
+		   ft_afficher_tab_c.c\
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
