@@ -6,7 +6,7 @@
 #    By: bandre <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 20:53:12 by bandre            #+#    #+#              #
-#    Updated: 2016/12/13 23:26:04 by bandre           ###   ########.fr        #
+#    Updated: 2017/02/01 19:57:47 by bandre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,6 +89,7 @@ SRC_NAME = ft_atoi.c\
 		   ft_ptradd.c\
 		   ft_ptradd_free.c\
 		   ft_afficher_tab_c.c\
+		   ft_is_number.c\
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

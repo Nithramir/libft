@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ptradd.c                                        :+:      :+:    :+:   */
+/*   ft_is_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 19:59:11 by bandre            #+#    #+#             */
-/*   Updated: 2017/02/01 19:59:18 by bandre           ###   ########.fr       */
+/*   Created: 2017/02/01 19:52:16 by bandre            #+#    #+#             */
+/*   Updated: 2017/02/01 19:56:41 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	**ft_ptradd(void **list, void *add)
+int		ft_is_number(char *str)
 {
-	int		i;
-	void	**new;
+	int i;
 
 	i = 0;
-	while (list[i])
-		i++;
-	if (!(new = (void**)malloc(sizeof(void*) * (i + 2))))
-		return (NULL);
-	i = 0;
-	while (list[i])
+	if (str[i])
+		if (str[i + 1])
+		{
+			if (ft_strchr("+-", str[i]))
+				i++;
+			else
+				return (0);
+		}
+	while (str[i])
 	{
-		new[i] = list[i];
+		if (ft_isdigit(str[i] == 0))
+			return (0);
 		i++;
 	}
-	new[i] = add;
-	new[i + 1] = NULL;
-	return (new);
+	return (1);
 }
