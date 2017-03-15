@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_number.c                                     :+:      :+:    :+:   */
+/*   mem_stock_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 19:52:16 by bandre            #+#    #+#             */
-/*   Updated: 2017/02/26 21:09:45 by bandre           ###   ########.fr       */
+/*   Created: 2017/03/15 22:38:53 by bandre            #+#    #+#             */
+/*   Updated: 2017/03/15 22:48:50 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_number(char *str)
+static void free_void(t_mem_stock *list)
 {
-	int i;
+	int j;
 
-	i = 0;
-	if (str[i])
-		if (str[i + 1])
-			if (ft_strchr("+-", str[i]))
-				i++;
-	while (str[i])
+	j = 0;
+	while (list->list_ptr[j])
 	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
+		free(list->list_ptr[j]);
+		j++;
 	}
-	return (1);
+	free(list->list_ptr);
 }
+
+void	mem_stock_free(void)
+{
+	t_mem_stock *list;
+	t_mem_stock *tmp;
+
+	list = mem_ptr();
+	while (list)
+	{
+		free_void(list);
+		tmp = list->next;
+		free(list);
+		list = tmp;
+	}
+}
+
