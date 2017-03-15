@@ -6,7 +6,7 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 22:04:15 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/15 23:50:41 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/15 23:53:08 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static	void		*mem_add(t_mem_stock *list, int i)
 		list = list->next;
 		j = 0;
 	}
-	if (!(list->list_ptr[j] = (void*)malloc(i)))
+	if (!(list->list_ptr[j] = (void*)ft_strnew(i)))
 		return (NULL);
 	return (list->list_ptr[j]);
 }
