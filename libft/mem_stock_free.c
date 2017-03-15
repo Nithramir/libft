@@ -6,7 +6,7 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 22:38:53 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/15 22:48:50 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/15 23:50:50 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ static void free_void(t_mem_stock *list)
 
 void	mem_stock_free(void)
 {
-	t_mem_stock *list;
+	t_mem_stock **list;
 	t_mem_stock *tmp;
 
 	list = mem_ptr();
-	while (list)
+	while (*list)
 	{
-		free_void(list);
-		tmp = list->next;
-		free(list);
-		list = tmp;
+		free_void(*list);
+		tmp = (*list)->next;
+		free(*list);
+		*list = tmp;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 20:40:27 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/15 22:50:37 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/15 23:42:13 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct		s_mem_stock
 }					t_mem_stock;
 
 void				*mem_stock(int i);
-t_mem_stock			*mem_ptr(void);
+t_mem_stock			**mem_ptr(void);
 void				mem_stock_free(void);
 
 void				*ft_memset(void *str, int c, size_t n);

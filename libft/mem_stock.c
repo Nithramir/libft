@@ -6,17 +6,17 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 22:04:15 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/15 22:39:20 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/15 23:50:41 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_mem_stock	*mem_ptr(void)
+t_mem_stock		**mem_ptr(void)
 {
 	static t_mem_stock *list = NULL;
 
-	return (list);
+	return (&list);
 }
 
 static t_mem_stock	*init_list(void)
@@ -55,12 +55,12 @@ static	void		*mem_add(t_mem_stock *list, int i)
 
 void		*mem_stock(int i)
 {
-	t_mem_stock *list;
+	t_mem_stock **list;
 
 	list = mem_ptr();
-	if (list == NULL)
-		if (!(list = init_list()))
+	if (*list == NULL)
+		if (!(*list = init_list()))
 			return (NULL);
-	return (mem_add(list, i));
+	return (mem_add(*list, i));
 }
 
