@@ -6,7 +6,7 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 21:29:18 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/20 23:09:40 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/21 01:07:45 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ void	mem_free_ptr(void *ptr)
 	list = *(mem_ptr());
 	while (list)
 	{
+		ft_putendl("test");
 		if (free_void(list, ptr))
 			break ;
-		list = (list)->next;
+		list = list->next;
 	}
 }

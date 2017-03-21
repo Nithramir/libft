@@ -20,7 +20,7 @@ void	**ft_ptradd(void **list, void *add)
 	i = 0;
 	while (list[i])
 		i++;
-	if (!(new = (void**)malloc(sizeof(void*) * (i + 2))))
+	if (!(new = (void**)mem_stock(sizeof(void*) * (i + 2))))
 		return (NULL);
 	i = 0;
 	while (list[i])

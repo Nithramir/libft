@@ -6,7 +6,7 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 22:38:53 by bandre            #+#    #+#             */
-/*   Updated: 2017/03/20 22:54:48 by bandre           ###   ########.fr       */
+/*   Updated: 2017/03/21 00:38:44 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ static void free_void(t_mem_stock *list)
 	while (j < 50)
 	{
 		if (list->list_ptr[j])
-			free(list->list_ptr[j]);
+			mem_free_ptr(list->list_ptr[j]);
 		j++;
 	}
-	free(list->list_ptr);
+	mem_free_ptr(list->list_ptr);
 }
 
 void	mem_stock_free(void)
@@ -36,8 +36,9 @@ void	mem_stock_free(void)
 	{
 		free_void(*list);
 		tmp = (*list)->next;
-		free(*list);
+		mem_free_ptr(*list);
 		*list = tmp;
 	}
+	*list = NULL;
 }
 
