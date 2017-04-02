@@ -6,13 +6,13 @@
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/01 19:58:55 by bandre            #+#    #+#             */
-/*   Updated: 2017/02/01 19:59:03 by bandre           ###   ########.fr       */
+/*   Updated: 2017/04/02 18:41:37 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	**ft_ptradd(void **list, void *add)
+void	**ft_ptradd_free(void **list, void *add)
 {
 	int		i;
 	void	**new;
