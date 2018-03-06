@@ -40,7 +40,7 @@ static t_mem_stock	*init_list(void)
 	return (list);
 }
 
-static	void		*mem_add(t_mem_stock *list, int i)
+static	void	*mem_add(t_mem_stock *list, int i)
 {
 	int j;
 
@@ -61,7 +61,7 @@ static	void		*mem_add(t_mem_stock *list, int i)
 	return (list->list_ptr[j]);
 }
 
-void		*mem_stock(int i)
+void			*mem_stock(int i)
 {
 	t_mem_stock **list;
 

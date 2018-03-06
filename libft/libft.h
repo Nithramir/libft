@@ -25,10 +25,10 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct		s_mem_stock
+typedef struct		s_mem
 {
 	void			**list_ptr;
-	struct			s_mem_stock *next;
+	struct s_mem	*next;
 }					t_mem_stock;
 
 void				*mem_stock(int i);

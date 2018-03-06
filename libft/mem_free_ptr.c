@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int free_void(t_mem_stock *list, void *ptr)
+static int	free_void(t_mem_stock *list, void *ptr)
 {
 	int j;
 
@@ -31,7 +31,7 @@ static int free_void(t_mem_stock *list, void *ptr)
 	return (0);
 }
 
-void	mem_free_ptr(void *ptr)
+void		mem_free_ptr(void *ptr)
 {
 	t_mem_stock *list;
 
