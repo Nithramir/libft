@@ -29,14 +29,14 @@ static char	*gestion_ioux(int len, char *string_zero, t_param list, char *s)
 		}
 		tmp = s;
 		s = ft_strjoin(string_zero, tmp);
-		mem_free_ptr(tmp);
+		free(tmp);
 		if (ft_strchr(s, '-') && s)
 		{
 			tmp = ft_strchr(s, '-');
 			s[0] = '-';
 			*tmp = '0';
 		}
-		mem_free_ptr(string_zero);
+		free(string_zero);
 	}
 	return (s);
 }

@@ -67,6 +67,6 @@ char			*ft_unicode(wchar_t carac)
 	}
 	else
 		ft_extend(chain, s, len, carac);
-	mem_free_ptr(s);
+	free(s);
 	return (chain);
 }

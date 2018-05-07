@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_number.c                                     :+:      :+:    :+:   */
+/*   ft_cassupp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/01 19:52:16 by bandre            #+#    #+#             */
-/*   Updated: 2017/02/26 21:09:45 by bandre           ###   ########.fr       */
+/*   Created: 2016/12/04 01:26:52 by bandre            #+#    #+#             */
+/*   Updated: 2016/12/04 17:06:01 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_is_number(char *str)
+char	*ft_casp(t_param list, char *s)
 {
-	int i;
-
-	i = 0;
-	if (str[i])
-		if (str[i + 1])
-			if (ft_strchr("+-", str[i]))
-				i++;
-	while (str[i])
-	{
-		if (ft_isdigit(str[i]) == 0)
-			return (0);
-		i++;
-	}
-	return (1);
+	if (list.specifier == 'i' || list.specifier == 'd' || list.specifier == 'o'
+			|| list.specifier == 'O' || list.specifier == 'x' ||
+			list.specifier == 'X' || list.specifier == 'u' ||
+			list.specifier == 'U' || list.specifier == 'D')
+		if (list.precision == 0 && ft_strlen(s) == 1 && s[0] == '0')
+			s[0] = '\0';
+	return (s);
 }
