@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bandre <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: bandre <bandre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 20:53:12 by bandre            #+#    #+#              #
-#    Updated: 2016/12/04 19:44:46 by bandre           ###   ########.fr        #
+#    Updated: 2018/05/07 18:25:59 by bandre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ SRC_NAME = ft_atoi.c\
 		   ft_putlst.c\
 		   ft_itoa_base_signed.c\
 		   ft_itoa_base.c\
+		   print_memory.c\
 
 SRC_PRINTF = ft_affichage.c\
 			 ft_gestion_flag.c\

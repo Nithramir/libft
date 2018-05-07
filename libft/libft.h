@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bandre <bandre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 20:40:27 by bandre            #+#    #+#             */
-/*   Updated: 2016/12/05 00:44:02 by bandre           ###   ########.fr       */
+/*   Updated: 2018/05/07 18:25:42 by bandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ void				ft_lstadd(t_list **alst, t_list *newt);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_putlst(t_list *lst);
+void				print_memory(char *addrchar, size_t size);
 
 #endif
