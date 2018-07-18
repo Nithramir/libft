@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nithramir <nithramir@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:54:34 by bandre            #+#    #+#             */
-/*   Updated: 2016/11/08 18:30:18 by bandre           ###   ########.fr       */
+/*   Updated: 2018/07/18 12:27:29 by nithramir        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*debut;
-	char	*fin;
 	size_t	i;
+	char	*fin;
 
 	i = 0;
 	debut = (char*)src;

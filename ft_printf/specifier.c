@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   specifier_s.c                                      :+:      :+:    :+:   */
+/*   specifier.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nithramir <nithramir@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/04 18:09:08 by bandre            #+#    #+#             */
-/*   Updated: 2016/12/05 19:57:41 by bandre           ###   ########.fr       */
+/*   Updated: 2018/07/18 12:32:32 by nithramir        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char		*specifier_i(t_param list, va_list ap)
 	else if (list.longueur == 'z')
 		s = ft_itoa_base_signed(va_arg(ap, ssize_t), 10, 0);
 	else if (list.longueur == 'j')
-		s = ft_itoa_base_signed((ssize_t)va_arg(ap, intmax_t), 10, 0);
+		s = ft_itoa_base_signed((ssize_t)va_arg(ap, int), 10, 0);
 	return (s);
 }
 
@@ -52,7 +52,7 @@ char		*specifier_uox(t_param list, va_list ap, int base, int m)
 	else if (list.longueur == 'z')
 		s = ft_itoa_base((size_t)va_arg(ap, size_t), base, m);
 	else if (list.longueur == 'j')
-		s = ft_itoa_base((size_t)va_arg(ap, uintmax_t), base, m);
+		s = ft_itoa_base((size_t)va_arg(ap, int), base, m);
 	return (s);
 }
 

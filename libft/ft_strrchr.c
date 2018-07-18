@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bandre <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: nithramir <nithramir@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 15:52:47 by bandre            #+#    #+#             */
-/*   Updated: 2016/11/08 18:02:57 by bandre           ###   ########.fr       */
+/*   Updated: 2018/07/18 12:26:27 by nithramir        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
-	char	carac;
 
-	carac = (char)c;
 	i = 0;
 	while (str[i])
 		i++;
